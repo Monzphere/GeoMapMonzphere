@@ -1,0 +1,80 @@
+/* Garante que os containers do widget Zabbix tenham altura */
+.dashboard-widget-geomapmonzphere .dashboard-grid-widget-body,
+.dashboard-widget-geomapmonzphere .dashboard-grid-widget-contents {
+    height: 100%;
+    /* Adiciona preenchimento zero para evitar problemas de layout */
+    padding: 0;
+    display: flex; /* Ajuda a propagar a altura */
+    flex-direction: column; /* Ajuda a propagar a altura */
+}
+
+/* Garante que o container do mapa use a altura disponível e define uma altura mínima */
+.dashboard-widget-geomapmonzphere .leaflet-container {
+    flex-grow: 1; /* Faz o mapa ocupar o espaço restante */
+    width: 100%;
+    min-height: 300px; /* Altura mínima como fallback */
+}
+
+/* Estilos para os clusters de marcadores */
+.marker-cluster-small {
+	background-color: rgba(110, 204, 57, 0.6);
+	}
+.marker-cluster-medium {
+	background-color: rgba(240, 194, 12, 0.6);
+	}
+.marker-cluster-large {
+	background-color: rgba(253, 156, 115, 0.6);
+	}
+
+.marker-cluster {
+	background-clip: padding-box;
+	border-radius: 50%; /* Torna redondo */
+}
+.marker-cluster div {
+	height: 100%;
+	width: 100%;
+	margin-left: auto; /* Centraliza horizontalmente */
+	margin-right: auto; /* Centraliza horizontalmente */
+	text-align: center;
+	border-radius: 50%; /* Garante que o div interno também seja redondo */
+	display: flex; /* Habilita flexbox */
+	align-items: center; /* Centraliza verticalmente */
+	justify-content: center; /* Centraliza horizontalmente */
+	font-weight: bold;
+}
+.marker-cluster span {
+	line-height: 1; /* Ajusta a linha para centralizar melhor o número */
+	color: white; /* Cor do texto do número */
+}
+
+/* Adiciona estilo para cluster selecionado se necessário */
+.marker-cluster.selected {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5); /* Exemplo de destaque */
+} 
+
+.dashboard-widget-geomapmonzphere .geomap-filter {
+    position: absolute;
+    right: 0;
+    display: none;
+    padding: 5px 20px 5px 10px;
+    margin-top: 5px;
+    margin-right: -2px;
+    background-color: #ffffff;
+    border: 1px solid #ccd5d9;
+ }
+
+ .dashboard-widget-geomapmonzphere .geomap-filter {
+    position: absolute;
+    right: 0;
+    display: none;
+    padding: 5px 20px 5px 10px;
+    margin-top: 5px;
+    margin-right: -2px;
+    background-color: #ffffff;
+    border: 1px solid #ccd5d9; }
+    .dashboard-widget-geomapmonzphere .geomap-filter.collapsed {
+      display: block; }
+    .dashboard-widget-geomapmonzphere .geomap-filter li {
+      width: calc(100% + 20px); }
+    .dashboard-widget-geomapmonzphere .geomap-filter label {
+      white-space: nowrap; }
