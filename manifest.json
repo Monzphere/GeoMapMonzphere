@@ -5,7 +5,7 @@
 	"name": "Geomap Monzphere",
 	"namespace": "GeomapMonzphere",
 	"version": "1.0",
-	"author": "Zabbix",
+	"author": "Monzphere",
 	"description": "Displays hosts as markers on a geographical map.",
 	"url": "web_interface/frontend_sections/dashboards/widgets/geomap",
 	"widget": {
